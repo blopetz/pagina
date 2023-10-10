@@ -1,0 +1,8 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Redirige URLs que terminan en /index.php a la versión sin index.php
+    RewriteCond %{THE_REQUEST} ^GET\ /.+/index\.php\ HTTP/
+    RewriteRule ^(.+)/index\.php$ /$1 [R=301,L]
+
+</IfModule>

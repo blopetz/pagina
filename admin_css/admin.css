@@ -1,0 +1,329 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+}
+/**************************/
+/* Diseño del Panel Admin */
+/**************************/
+#admin-panel {
+    width: 200px;
+    height: 100vh;
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.75);
+    position: fixed;
+    overflow-y: auto;
+}
+
+#admin-panel h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    font-size: 1.8em;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+#admin-panel ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#admin-panel ul li {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#admin-panel ul li a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#admin-panel ul li:hover {
+    background: #444;
+}
+
+#admin-panel ul li:hover a {
+    color: #fff;
+}
+
+/*********************************/
+/* Diseño del sub-menu del panel */
+/*********************************/
+#admin-panel ul .submenu {
+    display: none;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+#admin-panel ul .submenu li {
+    padding: 5px;
+}
+
+#admin-panel ul .submenu li a {
+    display: block;
+}
+
+#admin-panel ul .submenu li a:hover {
+    color: #fff;
+}
+
+#admin-panel ul li:hover .submenu {
+    display: block;
+}
+
+/**********************************/
+/*Diseños del Formulario Productos*/
+/**********************************/
+.content-wrapper {
+    justify-content: space-between;
+    padding: 20px;
+    flex-grow: 1;
+    background-color: #f8f8f8;
+    padding-left: 38vh;
+    
+}
+
+.form-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.product-form label {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    color: #333;
+    font-weight: bold;
+}
+
+.product-form input, .product-form select {
+    width: 96%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+.product-form input[type="submit"] {
+    margin-top: 20px;
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-form input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.opciones {
+    font-size: 17px;
+}
+
+.content-wrapper h1 {
+    padding-left: 30vh;
+}
+
+/**********************************/
+/**********Product Manage**********/
+/**********************************/
+
+.content-area {
+    margin-left: 270px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Cambiado a column para que los elementos se muestren verticalmente */
+    gap: 20px;
+    width: 70%;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.product-filter {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.product-filter select, .product-filter input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-item {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.2s ease;
+}
+
+.product-img {
+    width: 50px; /* Establece el ancho que deseas para la imagen */
+    height: auto; /* Esto mantendrá las proporciones originales de la imagen */
+    border-radius: 5px; /* Para darle bordes redondeados si lo deseas */
+    margin-right: 20px; /* Espacio a la derecha para separarla del texto */
+}
+
+.product-item:hover {
+    background-color: #f5f5f5;
+}
+
+.product-item:hover .product-actions {
+    display: block;
+}
+
+.product-info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    flex: 1;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+.product-description {
+    color: #777;
+    font-size: 0.9em;
+}
+
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-price {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.edit-delete-buttons {
+    display: none;
+    flex-direction: column; /* Cambiado a column para que los botones se muestren uno encima del otro */
+    gap: 5px;
+}
+
+.edit-delete-buttons button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button {
+    background-color: #ffa500;
+    color: #fff;
+}
+
+.delete-button {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.edit-button:hover {
+    background-color: #cc7a00;
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+}
+
+.edit-btn, .delete-btn {
+    background-color: #007BFF;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn {
+    background-color: #FF0000;
+}
+
+.edit-btn:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn:hover {
+    background-color: #cc0000;
+}
+
+.product-edit {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
